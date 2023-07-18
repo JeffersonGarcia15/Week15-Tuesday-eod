@@ -1,5 +1,7 @@
 const GET_ALL_SCIENTISTS = "GET_ALL_SCIENTISTS";
 const GET_SINGLE_SCIENTIST = "GET_SINGLE_SCIENTIST";
+const UPDATE_SINGLE_SCIENTIST = "UPDATE_SINGLE_SCIENTIST";
+const DELETE_SCIENTIST = "DELETE_SCIENTIST";
 
 export function getAllScientistsCreator(scientists) {
 	return {
@@ -12,6 +14,20 @@ export function getSingleScientistCreator(scientist) {
 	return {
 		type: GET_SINGLE_SCIENTIST,
 		scientist,
+	};
+}
+
+export function updateScientistCreator(scientist) {
+	return {
+		type: UPDATE_SINGLE_SCIENTIST,
+		scientist,
+	};
+}
+
+export function deleteScientistCreator(id) {
+	return {
+		type: DELETE_SCIENTIST,
+		id,
 	};
 }
 
@@ -30,6 +46,16 @@ export function scientistReducer(state = initialState, action) {
 		// newState = { ...state, singleScientist: {} };
 		newState = structuredClone(state);
 		newState.singleScientist = action.scientist;
+		return newState;
+	case UPDATE_SINGLE_SCIENTIST:
+		// newState = { ...state, singleScientist: {} };
+		newState = structuredClone(state);
+		newState.singleScientist = action.scientist;
+		return newState;
+	case DELETE_SCIENTIST:
+		newState = structuredClone(state);
+		newState.singleScientist = {};
+		delete newState.allScientists[action.id];
 		return newState;
 	default:
 		return state;
