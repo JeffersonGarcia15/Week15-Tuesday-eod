@@ -1,0 +1,34 @@
+{
+    "scientists": [
+            {
+                "id": 1,
+                "name": "Albert Einstein",
+                "biography":
+                    "Albert Einstein was a famous physicist. His research spanned from quantum mechanics to theories about gravity and motion. After publishing some groundbreaking papers, Einstein toured the world and gave speeches about his discoveries."
+            },
+            {
+                "id": 2,
+                "name": "Marie Curie",
+                "biography":
+                    "Marie Curie was a physicist, chemist and pioneer in the study of radiation. She discovered the elements polonium and radium with her husband, Pierre. They were awarded the Nobel Prize in Physics in 1903, along with Henri Becquerel, and Marie received the Nobel Prize in Chemistry in 1911."
+            },
+            {
+                "id": 3,
+                "name": "Isaac Newton",
+                "biography":
+                    "Sir Isaac Newton FRS (25 December 1642 – 20 March 1726/27) was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure in the philosophical revolution known as the Enlightenment."
+            },
+            {
+                "id": 4,
+                "name": "Charles Darwin",
+                "biography":
+                    "Charles Darwin is primarily known as the architect of the theory of evolution by natural selection. With the publication of On the Origin of Species in 1859, he advanced a view of the development of life on earth that profoundly shaped nearly all biological and much philosophical thought which followed."
+            },
+            {
+                "id": 5,
+                "name": "Nikola Tesla",
+                "biography":
+                    "Nikola Tesla, (born July 9/10, 1856, Smiljan, Austrian Empire [now in Croatia]—died January 7, 1943, New York, New York, U.S.), Serbian American inventor and engineer who discovered and patented the rotating magnetic field, the basis of most alternating-current machinery."
+            }
+    ]
+}
