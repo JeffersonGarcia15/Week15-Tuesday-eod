@@ -8,10 +8,11 @@ export function Details() {
 	const dispatch = useDispatch();
 	const scientist = useSelector((state) => state.scientists.singleScientist);
 	const { id } = useParams();
-	const [name, setName] = useState(scientist?.name);
-	const [biography, setBiography] = useState(scientist?.biography);
+	const [name, setName] = useState(scientist?.name || "");
+	const [biography, setBiography] = useState(scientist?.biography || "");
 	const [updateScientist, setUpdateScientist] = useState(false);
 	const [deleteScientist, setDeleteScientist] = useState(false);
+	const [validationErrors, setValidationErrors] = useState({});
 
 	useEffect(() => {
 		async function fetchData() {
@@ -63,7 +64,7 @@ export function Details() {
 					<form onSubmit={updateScientistInformation}>
 						<input type="text" value={name} onChange={(e) => setName(e.target.value)} />
 						<input type="text" value={biography} onChange={(e) => setBiography(e.target.value)} />
-						<button type="submit">Submit</button>
+						<button type="submit" disabled={!name.trim() || !biography.trim()}>Submit</button>
 					</form>
 				</>
 			)}
